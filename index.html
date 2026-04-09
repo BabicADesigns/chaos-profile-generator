@@ -1,0 +1,316 @@
+​​​​​​​​​​​​​​​​<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chaos Profile Generator · BabicADesigns</title>
+<meta name="description" content="Create your playful personality profile — free tool by BabicADesigns. AI + Content Strategist & Soulful Systems Builder.">
+<meta property="og:title" content="Chaos Profile Generator · BabicADesigns">
+<meta property="og:description" content="Find out who you really are in 2 minutes. A free fun personality tool by BabicADesigns ✨">
+<meta property="og:type" content="website">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@500;700&display=swap');
+:root{--cream:#FDF6EE;--blush:#F5C5B0;--rose:#E8A090;--terra:#C96B52;--mocha:#8B5E52;--dark:#2C1810;--sage:#B5C4A8;--lavender:#D4C5E2;--butter:#F5E6A3;--ink:#1A0A05;--white:#FFFAF6;--shadow:rgba(139,94,82,0.15)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'DM Sans',Georgia,sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,246,238,0.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(245,197,176,0.35);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Playfair Display',serif;font-weight:900;font-size:1.15rem;color:var(--dark);text-decoration:none;display:flex;align-items:center;gap:8px}
+.nav-logo span{color:var(--terra);font-style:italic}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-link{font-size:.82rem;font-weight:600;color:var(--mocha);text-decoration:none;padding:8px 14px;border-radius:100px;transition:background .2s,color .2s;white-space:nowrap}
+.nav-link:hover{background:rgba(245,197,176,.35);color:var(--terra)}
+.nav-link.cta{background:var(--terra);color:white;box-shadow:0 2px 10px rgba(201,107,82,.3)}
+.nav-link.cta:hover{background:#B85A43;color:white}
+@media(max-width:520px){.nav-link:not(.cta){display:none}}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:124px 24px 60px;position:relative;overflow:hidden;background:radial-gradient(ellipse 80% 60% at 20% 10%,rgba(245,197,176,.5) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 80% 80%,rgba(212,197,226,.45) 0%,transparent 55%),radial-gradient(ellipse 50% 40% at 60% 30%,rgba(245,230,163,.35) 0%,transparent 50%),var(--cream)}
+.blob{position:absolute;border-radius:50%;opacity:.13;animation:floatBlob 9s ease-in-out infinite;pointer-events:none}
+.b1{width:340px;height:340px;background:var(--blush);top:-80px;left:-80px;animation-delay:0s}.b2{width:220px;height:220px;background:var(--lavender);bottom:30px;right:-50px;animation-delay:-3s}.b3{width:150px;height:150px;background:var(--butter);top:40%;left:8%;animation-delay:-5s}.b4{width:110px;height:110px;background:var(--sage);bottom:20%;right:12%;animation-delay:-2s}
+@keyframes floatBlob{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-18px) scale(1.04)}}
+.hero-by{display:inline-flex;align-items:center;gap:8px;font-family:'Caveat',cursive;font-size:1.05rem;color:var(--mocha);margin-bottom:16px;animation:fadeUp .5s ease both}
+.hero-by a{color:var(--terra);text-decoration:none;font-weight:700}
+.hero-tag{display:inline-block;font-family:'Caveat',cursive;font-size:1.1rem;color:var(--terra);background:rgba(245,197,176,.45);border:1.5px solid var(--blush);padding:6px 20px;border-radius:100px;margin-bottom:22px;animation:fadeUp .6s .05s ease both}
+.hero-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(3rem,9vw,5.5rem);font-weight:900;line-height:1.05;color:var(--dark);margin-bottom:18px;animation:fadeUp .7s .1s ease both}
+.hero-title em{font-style:italic;color:var(--terra)}
+.hero-sub{font-size:1.05rem;color:var(--mocha);line-height:1.7;margin-bottom:36px;max-width:520px;animation:fadeUp .7s .2s ease both}
+.scroll-hint{font-family:'Caveat',cursive;font-size:1.2rem;color:var(--terra);cursor:pointer;animation:bounce 2s 1.5s ease-in-out infinite,fadeUp .7s .4s ease both;background:none;border:none;font-weight:500}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.form-section{max-width:740px;margin:0 auto;padding:60px 20px}
+.sec-label{font-family:'Caveat',cursive;font-size:1.3rem;color:var(--terra);text-align:center;margin-bottom:6px}
+.sec-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.7rem,4vw,2.5rem);font-weight:700;text-align:center;color:var(--dark);margin-bottom:36px}
+.form-card{background:var(--white);border-radius:26px;padding:44px 38px;box-shadow:0 8px 48px var(--shadow),0 2px 8px rgba(0,0,0,.03);position:relative}
+.form-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--blush),var(--terra),var(--lavender),var(--sage));border-radius:26px 26px 0 0}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+.fg{display:flex;flex-direction:column;gap:7px;margin-bottom:18px}.fg.nm{margin-bottom:0}
+label{font-size:.78rem;font-weight:700;color:var(--mocha);text-transform:uppercase;letter-spacing:.8px}
+input[type=text],input[type=email],select,textarea{background:var(--cream);border:2px solid transparent;border-radius:13px;padding:13px 16px;font-family:inherit;font-size:.94rem;color:var(--ink);outline:none;transition:border-color .25s,box-shadow .25s;width:100%;-webkit-appearance:none;appearance:none}
+input:focus,select:focus,textarea:focus{border-color:var(--rose);box-shadow:0 0 0 4px rgba(232,160,144,.14)}
+input::placeholder,textarea::placeholder{color:#C4A99A;font-style:italic}
+select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C96B52' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
+textarea{resize:vertical;min-height:76px}
+.upload-zone{border:2.5px dashed var(--blush);border-radius:15px;padding:28px 20px;text-align:center;cursor:pointer;transition:border-color .3s,background .3s;position:relative;overflow:hidden;min-height:120px}
+.upload-zone:hover{border-color:var(--rose);background:rgba(245,197,176,.07)}
+.upload-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.upload-icon-txt{font-size:1.9rem;margin-bottom:7px}.upload-msg{font-size:.88rem;color:var(--mocha)}.upload-msg strong{color:var(--terra)}
+#imgPreview{width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid var(--rose);margin:10px auto 0;display:none;box-shadow:0 4px 14px var(--shadow)}
+.btn-gen{width:100%;padding:19px;background:linear-gradient(135deg,var(--terra) 0%,#D04538 100%);color:white;border:none;border-radius:16px;font-family:'Playfair Display',Georgia,serif;font-size:1.25rem;font-weight:700;font-style:italic;cursor:pointer;margin-top:6px;transition:transform .2s,box-shadow .2s;box-shadow:0 6px 24px rgba(201,107,82,.38)}
+.btn-gen:hover{transform:translateY(-3px) scale(1.01);box-shadow:0 12px 36px rgba(201,107,82,.48)}
+.btn-gen-sub{display:block;font-family:'DM Sans',sans-serif;font-style:normal;font-size:.76rem;font-weight:400;opacity:.83;margin-top:3px}
+.loading-screen{display:none;position:fixed;inset:0;background:rgba(253,246,238,.93);backdrop-filter:blur(8px);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:18px}
+.loading-screen.on{display:flex}
+.spinner{width:52px;height:52px;border:4px solid var(--blush);border-top-color:var(--terra);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.load-main{font-family:'Playfair Display',serif;font-style:italic;font-size:1.4rem;color:var(--terra)}
+.load-sub{font-family:'Caveat',cursive;font-size:1.1rem;color:var(--mocha)}
+.result-section{display:none;max-width:840px;margin:0 auto;padding:10px 20px 60px}
+.result-section.on{display:block;animation:fadeUp .6s ease both}
+#profileCard{background:var(--white);border-radius:28px;padding:44px 40px;box-shadow:0 12px 64px var(--shadow),0 4px 16px rgba(0,0,0,.04);position:relative;overflow:hidden;margin-bottom:24px}
+.card-deco{position:absolute;inset:0;background:radial-gradient(ellipse 55% 40% at 90% 8%,rgba(245,197,176,.22) 0%,transparent 60%),radial-gradient(ellipse 45% 35% at 8% 92%,rgba(212,197,226,.18) 0%,transparent 55%);pointer-events:none}
+.card-top-bar{position:absolute;top:0;left:0;right:0;height:6px;border-radius:28px 28px 0 0}
+.card-head{display:flex;align-items:center;gap:22px;margin-bottom:28px;position:relative;z-index:1}
+.avatar-wrap{width:84px;height:84px;border-radius:50%;flex-shrink:0;border:4px solid var(--blush);box-shadow:0 6px 20px var(--shadow);display:flex;align-items:center;justify-content:center;font-size:2rem;overflow:hidden}
+.avatar-wrap img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.c-name{font-family:'Playfair Display',serif;font-size:1.85rem;font-weight:900;color:var(--dark);line-height:1.15}
+.c-title{font-family:'Caveat',cursive;font-size:1.1rem;color:var(--terra);margin-top:4px}
+.c-badge{display:inline-flex;align-items:center;gap:5px;padding:4px 14px;border-radius:100px;font-size:.73rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-top:8px}
+.card-notes{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative;z-index:1}
+.note{border-radius:16px;padding:18px 16px;transition:transform .25s,box-shadow .25s}
+.note:hover{transform:translateY(-3px) rotate(.3deg);box-shadow:0 8px 28px rgba(0,0,0,.1)}
+.n-icon{font-size:1.4rem;margin-bottom:7px;display:block}
+.n-lbl{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;opacity:.65}
+.n-txt{font-size:.9rem;line-height:1.6}.n-txt b{display:block;font-size:1rem;margin-bottom:3px}
+.nb{background:rgba(245,197,176,.38)}.nl{background:rgba(212,197,226,.38)}.ns{background:rgba(181,196,168,.38)}.ny{background:rgba(245,230,163,.38)}
+.quote-block{grid-column:1/-1;background:linear-gradient(135deg,var(--terra) 0%,#B8503A 100%);color:white;border-radius:18px;padding:26px 28px;position:relative;overflow:hidden}
+.quote-block::before{content:'❝';position:absolute;top:-12px;left:14px;font-size:5rem;opacity:.13;font-family:Georgia,serif}
+.q-lbl{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;opacity:.68;margin-bottom:9px}
+.q-txt{font-family:'Playfair Display',serif;font-style:italic;font-size:1.2rem;line-height:1.5;position:relative;z-index:1}
+.card-foot{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;padding-top:18px;margin-top:6px;border-top:1.5px solid rgba(201,107,82,.1);position:relative;z-index:1}
+.c-watermark{font-family:'Caveat',cursive;font-size:.95rem;color:var(--mocha);opacity:.55}
+.c-date{font-size:.74rem;color:var(--mocha);opacity:.45}
+.action-row{display:flex;gap:11px;flex-wrap:wrap;margin-bottom:22px}
+.btn{flex:1;min-width:130px;padding:15px 20px;border:none;border-radius:13px;font-family:inherit;font-size:.9rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:linear-gradient(135deg,var(--terra),#D04538);color:white;box-shadow:0 4px 16px rgba(201,107,82,.32)}
+.btn-outline{background:var(--white);color:var(--terra);border:2px solid var(--blush)}
+.btn-ghost{background:rgba(245,197,176,.2);color:var(--mocha)}
+.email-card{background:var(--white);border-radius:18px;padding:24px 28px;margin-bottom:22px;box-shadow:0 4px 24px var(--shadow);border:1.5px solid rgba(245,197,176,.45);display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.e-icon{font-size:1.9rem;flex-shrink:0}
+.e-text h4{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:2px}
+.e-text p{font-size:.82rem;color:var(--mocha)}
+.e-row{display:flex;gap:9px;flex:1;min-width:200px}
+.e-row input{flex:1;padding:11px 14px;background:var(--cream);border:2px solid transparent;border-radius:11px;font-size:.88rem;color:var(--ink);outline:none;transition:border-color .2s}
+.e-row input:focus{border-color:var(--rose)}
+.e-row button{padding:11px 18px;background:var(--terra);color:white;border:none;border-radius:11px;font-weight:600;cursor:pointer;font-size:.85rem;white-space:nowrap;transition:background .2s,transform .2s}
+.e-row button:hover{background:#B85A43;transform:scale(1.02)}
+.gallery-section{max-width:1080px;margin:0 auto;padding:20px 20px 80px}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;margin-top:28px}
+.g-item{background:var(--white);border-radius:18px;padding:22px;box-shadow:0 4px 20px var(--shadow);cursor:pointer;transition:transform .25s,box-shadow .25s,border-color .25s;border:2px solid transparent;position:relative;overflow:hidden}
+.g-item:hover{transform:translateY(-4px) scale(1.01);box-shadow:0 12px 40px var(--shadow);border-color:var(--blush)}
+.g-stripe{position:absolute;top:0;left:0;right:0;height:4px;border-radius:18px 18px 0 0}
+.g-avatar{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-top:10px;border:3px solid var(--blush);overflow:hidden}
+.g-avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.g-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--dark);margin:8px 0 3px}
+.g-title{font-family:'Caveat',cursive;font-size:.9rem;color:var(--terra);margin-bottom:10px}
+.g-tags{display:flex;flex-wrap:wrap;gap:4px}
+.g-tag{padding:3px 10px;border-radius:100px;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+.g-quote{font-size:.79rem;color:var(--mocha);font-style:italic;margin-top:10px;padding-top:10px;border-top:1px solid rgba(201,107,82,.1)}
+.empty-state{grid-column:1/-1;text-align:center;padding:50px 20px;color:var(--mocha)}
+.empty-state .ei{font-size:2.8rem;margin-bottom:10px}
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(44,24,16,.65);backdrop-filter:blur(8px);z-index:300;align-items:center;justify-content:center;padding:20px}
+.modal-bg.on{display:flex}
+.modal-box{background:var(--white);border-radius:24px;padding:36px;max-width:560px;width:100%;max-height:86vh;overflow-y:auto;position:relative;animation:popIn .3s cubic-bezier(.34,1.56,.64,1) both;box-shadow:0 24px 80px rgba(44,24,16,.28)}
+@keyframes popIn{from{opacity:0;transform:scale(.82) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.modal-close{position:absolute;top:18px;right:18px;width:34px;height:34px;background:var(--cream);border:none;border-radius:50%;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--mocha)}
+.footer{background:var(--dark);color:rgba(255,255,255,0.7);padding:56px 24px 32px;text-align:center}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:white;margin-bottom:8px}
+.footer-logo em{color:var(--blush);font-style:italic}
+.footer-tagline{font-family:'Caveat',cursive;font-size:1.1rem;color:var(--blush);margin-bottom:28px;opacity:.85}
+.footer-socials{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-bottom:36px}
+.social-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:100px;font-size:.84rem;font-weight:600;text-decoration:none;transition:transform .2s,opacity .2s;white-space:nowrap}
+.social-btn:hover{transform:translateY(-2px);opacity:.9}
+.social-btn.website{background:var(--terra);color:white}
+.social-btn.substack{background:#FF6719;color:white}
+.social-btn.instagram{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:white}
+.social-btn.tiktok{background:#000;color:white;border:1px solid rgba(255,255,255,.15)}
+.social-btn.pinterest{background:#E60023;color:white}
+.footer-divider{width:60px;height:2px;background:rgba(245,197,176,.3);margin:0 auto 28px;border-radius:2px}
+.footer-made{font-size:.8rem;color:rgba(255,255,255,.35);line-height:1.7}
+.footer-made a{color:rgba(245,197,176,.6);text-decoration:none}
+.promo-strip{background:linear-gradient(135deg,rgba(245,197,176,.25) 0%,rgba(212,197,226,.2) 100%);border:1.5px solid rgba(245,197,176,.4);border-radius:20px;padding:28px 32px;margin:0 auto 60px;max-width:840px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.promo-text{flex:1;min-width:200px}
+.promo-text h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--dark);margin-bottom:4px}
+.promo-text p{font-size:.88rem;color:var(--mocha);line-height:1.6}
+.promo-btns{display:flex;gap:10px;flex-wrap:wrap}
+.promo-btn{padding:11px 20px;border-radius:12px;font-size:.84rem;font-weight:600;text-decoration:none;transition:transform .2s;white-space:nowrap}
+.promo-btn:hover{transform:translateY(-2px)}
+.promo-btn.primary{background:var(--terra);color:white;box-shadow:0 4px 14px rgba(201,107,82,.3)}
+.promo-btn.secondary{background:var(--white);color:var(--terra);border:2px solid var(--blush)}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--dark);color:white;padding:13px 26px;border-radius:100px;font-size:.88rem;font-weight:500;z-index:400;transition:transform .4s cubic-bezier(.34,1.56,.64,1);white-space:nowrap;box-shadow:0 8px 32px rgba(0,0,0,.28);pointer-events:none}
+.toast.on{transform:translateX(-50%) translateY(0)}
+@media(max-width:580px){.form-card{padding:26px 18px}.row2{grid-template-columns:1fr}.card-notes{grid-template-columns:1fr}#profileCard{padding:26px 18px}.card-head{flex-direction:column;text-align:center}.action-row{flex-direction:column}.btn{width:100%}.email-card{flex-direction:column}.promo-strip{padding:22px 20px}}
+@media print{.nav,.footer,.promo-strip,.action-row,.email-card,.gallery-section{display:none!important}#profileCard{box-shadow:none!important}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="https://www.babicadesigns.com" target="_blank" class="nav-logo">Babica<span>A</span>Designs</a>
+  <div class="nav-links">
+    <a href="https://substack.com/@babicadesigns?r=5zrvy5&utm_medium=ios&utm_source=profile" target="_blank" class="nav-link">Newsletter</a>
+    <a href="https://www.instagram.com/babicadesigns" target="_blank" class="nav-link">Instagram</a>
+    <a href="https://www.babicadesigns.com" target="_blank" class="nav-link cta">✨ My Work</a>
+  </div>
+</nav>
+<section class="hero" id="top">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div>
+  <div class="hero-by">A free tool by <a href="https://www.babicadesigns.com" target="_blank">BabicADesigns</a> &nbsp;·&nbsp; AI + Content Strategist ✨</div>
+  <span class="hero-tag">for the main characters of the world</span>
+  <h1 class="hero-title">Your <em>Chaos</em><br>Profile</h1>
+  <p class="hero-sub">Answer a few deeply important questions and we'll generate a personality profile so accurate it might scare you. 🫣</p>
+  <button class="scroll-hint" id="heroScroll">↓ Let's find out who you really are</button>
+</section>
+<section class="form-section" id="form-section">
+  <div class="sec-label">the ritual ✍️</div>
+  <h2 class="sec-title">Fill in your chaos 🌀</h2>
+  <div class="form-card">
+    <div class="row2">
+      <div class="fg nm"><label>✍️ Your Name</label><input type="text" id="f-name" placeholder="e.g. Luna, Ava, chaos queen…"></div>
+      <div class="fg nm"><label>🎭 Your Vibe</label><select id="f-vibe"><option value="">Pick your energy…</option><option value="funny">😂 Funny — the joke AND the punchline</option><option value="chaotic">🌀 Chaotic — beautifully unpredictable</option><option value="soft">🌸 Soft — tender chaos, pastel edition</option><option value="savage">⚔️ Savage — loveable but unhinged</option><option value="main character">🎬 Main Character — obviously</option></select></div>
+    </div>
+    <div class="row2">
+      <div class="fg nm"><label>🎨 Your Aesthetic</label><select id="f-style"><option value="">Your style is…</option><option value="Pixar-style">🎭 Pixar — emotionally complex but cute</option><option value="realistic">📸 Realistic — exactly as chaotic as real life</option><option value="cartoon">✏️ Cartoon — bold lines, louder opinions</option><option value="aesthetic">🌷 Aesthetic — soft, curated, Pinterest-ready</option><option value="dreamy">🌙 Dreamy — one foot always somewhere else</option></select></div>
+      <div class="fg nm"><label>💫 Describe yourself in one word</label><input type="text" id="f-describe" placeholder="e.g. unstoppable, soft, feral…"></div>
+    </div>
+    <div class="fg"><label>😏 Your Toxic Trait (be honest)</label><input type="text" id="f-toxic" placeholder="e.g. falling for potential, oversharing at 2am…"></div>
+    <div class="fg"><label>⚡ Your Secret Superpower</label><input type="text" id="f-power" placeholder="e.g. making strangers feel seen…"></div>
+    <div class="fg"><label>📿 Your Life Motto</label><input type="text" id="f-motto" placeholder="e.g. burn bright or burn everything…"></div>
+    <div class="fg">
+      <label>📸 Upload a Photo <span style="opacity:.5;font-weight:400;text-transform:none;">(optional)</span></label>
+      <div class="upload-zone"><input type="file" id="f-image" accept="image/*"><div class="upload-icon-txt">🖼️</div><div class="upload-msg" id="uploadMsg">Tap here or <strong>browse your photos</strong></div><img id="imgPreview" src="" alt="preview"></div>
+    </div>
+    <button class="btn-gen" id="genBtn">✨ Generate My Chaos Profile<span class="btn-gen-sub">This might be your villain origin story. Or your glow-up. TBD.</span></button>
+  </div>
+</section>
+<div class="loading-screen" id="loader"><div class="spinner"></div><div class="load-main" id="loadTxt">Summoning your chaos spirit…</div><div class="load-sub" id="loadSub">consulting the oracle 🔮</div></div>
+<section class="result-section" id="resultSection">
+  <div class="sec-label">your chaos, defined</div>
+  <h2 class="sec-title" style="margin-bottom:24px;">Here she is ✨</h2>
+  <div id="profileCard"><div class="card-deco"></div><div class="card-top-bar" id="cardBar"></div><div class="card-head"><div class="avatar-wrap" id="avatarWrap"></div><div><div class="c-name" id="cName"></div><div class="c-title" id="cTitle"></div><div class="c-badge" id="cBadge"></div></div></div><div class="card-notes" id="cardNotes"></div></div>
+  <div class="email-card"><div class="e-icon">💌</div><div class="e-text"><h4>Keep your profile forever</h4><p>Drop your email & we'll send you a copy (no spam, pinky promise)</p></div><div class="e-row"><input type="email" id="emailInp" placeholder="your@email.com"><button id="emailBtn">Save ✨</button></div></div>
+  <div class="action-row"><button class="btn btn-primary" id="printBtn">🖨️ Print / Save as PDF</button><button class="btn btn-outline" id="copyBtn">📋 Copy Profile Text</button><button class="btn btn-ghost" id="newBtn">🔄 Make Another</button></div>
+</section>
+<section class="gallery-section"><div class="sec-label">wall of chaos</div><h2 class="sec-title">Profile Gallery 🖼️</h2><p style="text-align:center;color:var(--mocha);font-size:.88rem;margin-top:-18px;">Saved in your browser — tap any card to view</p><div class="gallery-grid" id="galleryGrid"></div></section>
+<div class="promo-strip"><div class="promo-text"><h3>✨ Want more soulful systems & AI magic?</h3><p>Strategic insights, honest realities, practical frameworks — building your brand with AI YOUR way. 🧡</p></div><div class="promo-btns"><a href="https://substack.com/@babicadesigns?r=5zrvy5&utm_medium=ios&utm_source=profile" target="_blank" class="promo-btn primary">📬 Read the Newsletter</a><a href="https://www.babicadesigns.com" target="_blank" class="promo-btn secondary">🌐 My Website</a></div></div>
+<footer class="footer">
+  <div class="footer-logo">Babica<em>A</em>Designs</div>
+  <div class="footer-tagline">Create with Heart. Scale with AI magic. ✨ YOUR way.</div>
+  <div class="footer-socials">
+    <a href="https://www.babicadesigns.com" target="_blank" class="social-btn website">🌐 Website</a>
+    <a href="https://substack.com/@babicadesigns?r=5zrvy5&utm_medium=ios&utm_source=profile" target="_blank" class="social-btn substack">📬 Substack</a>
+    <a href="https://www.instagram.com/babicadesigns" target="_blank" class="social-btn instagram">📸 Instagram</a>
+    <a href="https://www.tiktok.com/@babicadesigns" target="_blank" class="social-btn tiktok">🎵 TikTok</a>
+    <a href="https://pin.it/50BPl6JWs" target="_blank" class="social-btn pinterest">📌 Pinterest</a>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-made">Made with 🧡 by <a href="https://www.babicadesigns.com" target="_blank">BabicADesigns</a> &nbsp;·&nbsp; AI + Content Strategist &amp; Soulful Systems Builder<br><span style="opacity:.5;font-size:.75rem;">Free to use and share. No data stored on any server.</span></div>
+</footer>
+<div class="modal-bg" id="modalBg"><div class="modal-box"><button class="modal-close" id="modalClose">✕</button><div id="modalBody"></div></div></div>
+<div class="toast" id="toast"></div>
+<script>
+var TITLES={funny:["The Funniest Person in Any Room (verified)","Professional Overthinker & Part-Time Comedian","CEO of Accidental Main Character Moments","Chaos Gremlin with a Heart of Gold"],chaotic:["Architect of Beautiful Disasters","The Plot Twist Nobody Saw Coming","Chaos Curator & Vibe Technician","A Walking Contradiction (but make it fashion)"],soft:["Tender Soul in a Loud World","Soft Hours, All the Time","The One Who Makes Everything Feel Safe","Gentle Giant of Emotional Intelligence"],savage:["Unbothered. Moisturised. In My Lane.","The Villain in Someone Else's Story (rightfully so)","Politely Ferocious Since Birth","Sweet Until She Isn't"],"main character":["Obviously the Main Character","The Protagonist You Didn't Know You Needed","Narrator, Lead Role & Director — All at Once","Living in a Movie (everyone else is supporting)"]};
+var TRAITS={funny:["Literally never serious at the wrong time","Turns trauma into content naturally","Always the one who breaks the silence","Has a bit for every situation"],chaotic:["Makes plans at 11pm for 8am","Rearranges entire life based on a song","Starts projects at 100% then outsources the ending","Genuinely doesn't know what happens next — neither do we"],soft:["Cries at commercials but insists they're fine","Sends voice notes that are mini therapy sessions","Remembers everyone's birthday AND their dog's name","Makes people feel like the main character"],savage:["Direct. Alarmingly direct.","Has a comeback before you finish your sentence","Forgives, but the file stays open","Will say what everyone was thinking, but smarter"],"main character":["Enters every room like a scene change","Has a soundtrack playing in their head at all times","Manifests things and calls it 'planning'","Turns ordinary moments into montage sequences"]};
+var WEAKNESS={funny:["Uses humour to avoid vulnerability (cute about it)","Cannot take a compliment without deflecting","Texts 'lol' when absolutely devastated"],chaotic:["Browser: 47 tabs, 0 answers","Thinks sleep is optional — it is not","Spirals majestically at midnight"],soft:["Over-apologises for other people's problems","Gives too many chances because they believe in people","Absorbs everyone's energy like an emotional sponge"],savage:["Says 'I'm fine' when clearly not fine","The silent treatment could outlast civilisations","Holds grudges with impressive dedication"],"main character":["Reality keeps interrupting the narrative","Overthinks their own plot arc","Expects life to have a satisfying arc by the third act"]};
+var FUNFACT={funny:["Has made at least one person snort-laugh in public.","Their texting speed increases with emotional intensity.","Can turn any awkward silence into a bit within 10 seconds."],chaotic:["Has started 11 journaling practices and 0 have survived.","Their 'quick idea' has a 40-page doc attached.","Once redecorated a room at 2am. It looked great."],soft:["Has a playlist for every specific human emotion.","Gives the best hugs. Scientifically tested.","Makes strangers feel like old friends within 5 minutes."],savage:["Their poker face is flawless. Their thoughts are not.","Has said 'no' and meant it with their whole chest.","Will eat alone before compromising their peace."],"main character":["Has rehearsed speeches in the shower that never aired.","Lives 3–5 years ahead of the current timeline.","Has a signature walk and a soundtrack only they can hear."]};
+var PALETTES=[{bar:"linear-gradient(90deg,#F5C5B0,#E8A090,#D4C5E2)",badge:"rgba(245,197,176,.5)",badgeTxt:"#8B5E52",avatarBg:"rgba(245,197,176,.3)"},{bar:"linear-gradient(90deg,#D4C5E2,#B5C4A8,#F5E6A3)",badge:"rgba(212,197,226,.5)",badgeTxt:"#6B5580",avatarBg:"rgba(212,197,226,.3)"},{bar:"linear-gradient(90deg,#B5C4A8,#F5E6A3,#F5C5B0)",badge:"rgba(181,196,168,.5)",badgeTxt:"#4A6040",avatarBg:"rgba(181,196,168,.3)"},{bar:"linear-gradient(90deg,#C96B52,#E8A090,#F5C5B0)",badge:"rgba(201,107,82,.15)",badgeTxt:"#8B3C2C",avatarBg:"rgba(201,107,82,.12)"},{bar:"linear-gradient(90deg,#F5E6A3,#F5C5B0,#D4C5E2)",badge:"rgba(245,230,163,.6)",badgeTxt:"#7A6020",avatarBg:"rgba(245,230,163,.3)"}];
+var VEMOJI={funny:"😂",chaotic:"🌀",soft:"🌸",savage:"⚔️","main character":"🎬"};
+var SEMOJI={"Pixar-style":"🎭",realistic:"📸",cartoon:"✏️",aesthetic:"🌷",dreamy:"🌙"};
+var LOADLINES=[["Summoning your chaos spirit…","consulting the oracle 🔮"],["Analysing your main character energy…","protagonist loading… 🎬"],["Cross-referencing the chaos archives…","you might be unprecedented 🌀"],["Calculating toxic trait ratio…","we found things. impressive things. 😏"],["Consulting the vibes…","one sec, you're complex ✨"]];
+var uploadedImg=null,currentProfile=null;
+function p(a){return a[Math.floor(Math.random()*a.length)];}
+function showToast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('on');setTimeout(function(){t.classList.remove('on');},3000);}
+document.getElementById('f-image').addEventListener('change',function(e){var f=e.target.files&&e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(ev){uploadedImg=ev.target.result;var i=document.getElementById('imgPreview');i.src=ev.target.result;i.style.display='block';document.getElementById('uploadMsg').innerHTML='&#x2705; <strong>Photo ready!</strong> &#x1F31F;';};r.readAsDataURL(f);});
+document.getElementById('heroScroll').addEventListener('click',function(){document.getElementById('form-section').scrollIntoView({behavior:'smooth'});});
+document.getElementById('genBtn').addEventListener('click',function(){
+  var name=document.getElementById('f-name').value.trim();
+  var vibe=document.getElementById('f-vibe').value;
+  var style=document.getElementById('f-style').value;
+  var desc=document.getElementById('f-describe').value.trim();
+  var toxic=document.getElementById('f-toxic').value.trim();
+  var power=document.getElementById('f-power').value.trim();
+  var motto=document.getElementById('f-motto').value.trim();
+  if(!name){showToast('✍️ We need at least your name!');return;}
+  if(!vibe){showToast('🎭 Pick a vibe first!');return;}
+  var line=p(LOADLINES);
+  document.getElementById('loadTxt').textContent=line[0];
+  document.getElementById('loadSub').textContent=line[1];
+  document.getElementById('loader').classList.add('on');
+  setTimeout(function(){
+    document.getElementById('loader').classList.remove('on');
+    var key=vibe.toLowerCase();
+    var palIdx=Math.floor(Math.random()*PALETTES.length);
+    var tArr=TRAITS[key]||TRAITS.chaotic;
+    var t1=p(tArr);
+    var others=tArr.filter(function(x){return x!==t1;});
+    var t2=others.length?p(others):t1;
+    currentProfile={id:Date.now(),name:name,vibe:vibe,style:style,desc:desc,toxic:toxic,power:power,motto:motto,title:p(TITLES[key]||TITLES.chaotic),t1:t1,t2:t2,weakness:p(WEAKNESS[key]||WEAKNESS.chaotic),funFact:p(FUNFACT[key]||FUNFACT.chaotic),palIdx:palIdx,image:uploadedImg,date:new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})};
+    renderCard(currentProfile);saveGallery(currentProfile);loadGallery();
+    var rs=document.getElementById('resultSection');rs.classList.add('on');
+    setTimeout(function(){rs.scrollIntoView({behavior:'smooth',block:'start'});},80);
+    showToast('✨ Your chaos profile is ready!');
+  },1600+Math.random()*700);
+});
+function renderCard(pr){
+  var pal=PALETTES[pr.palIdx]||PALETTES[0];
+  var key=(pr.vibe||'chaotic').toLowerCase();
+  document.getElementById('cardBar').style.background=pal.bar;
+  var aw=document.getElementById('avatarWrap');
+  aw.style.background=pal.avatarBg;
+  if(pr.image){aw.innerHTML='<img src="'+pr.image+'" alt="photo">';}else{aw.textContent=VEMOJI[key]||'✨';aw.style.fontSize='2rem';}
+  document.getElementById('cName').textContent=pr.name;
+  document.getElementById('cTitle').textContent=pr.title;
+  var badge=document.getElementById('cBadge');
+  badge.style.background=pal.badge;badge.style.color=pal.badgeTxt;
+  badge.innerHTML=(VEMOJI[key]||'✨')+' '+pr.vibe+(pr.style?' &nbsp;&middot;&nbsp; '+(SEMOJI[pr.style]||'🎨')+' '+pr.style:'');
+  document.getElementById('cardNotes').innerHTML=
+    '<div class="note nb"><span class="n-icon">💫</span><div class="n-lbl">Character Traits</div><div class="n-txt"><b>'+pr.t1+'</b>'+(pr.t2&&pr.t2!==pr.t1?pr.t2:'')+(pr.desc?'<br><br><em style="opacity:.7;font-size:.82rem;">Self-described: &ldquo;'+pr.desc+'&rdquo;</em>':'')+'</div></div>'+
+    '<div class="note nl"><span class="n-icon">⚡</span><div class="n-lbl">Secret Superpower</div><div class="n-txt"><b>'+(pr.power||'Undiscovered — but it\'s massive')+'</b>Rare. Powerful. Probably underused.</div></div>'+
+    '<div class="note ns"><span class="n-icon">🕳️</span><div class="n-lbl">Documented Weakness</div><div class="n-txt"><b>'+pr.weakness+'</b>'+(pr.toxic?'<br><em style="font-size:.82rem;opacity:.75;">Self-reported: &ldquo;'+pr.toxic+'&rdquo;</em>':'')+'</div></div>'+
+    '<div class="note ny"><span class="n-icon">🎲</span><div class="n-lbl">Fun Fact</div><div class="n-txt">'+pr.funFact+'</div></div>'+
+    '<div class="quote-block"><div class="q-lbl">Life Motto / Signature Quote</div><div class="q-txt">&ldquo;'+(pr.motto||pr.title)+'&rdquo;</div></div>'+
+    '<div class="card-foot"><div class="c-watermark">✨ babicadesigns.com</div><div class="c-date">'+pr.date+'</div></div>';
+}
+function saveGallery(pr){try{var l=JSON.parse(localStorage.getItem('chaosProfiles')||'[]');l.unshift(pr);localStorage.setItem('chaosProfiles',JSON.stringify(l.slice(0,20)));}catch(e){}}
+function loadGallery(){
+  var list=[];try{list=JSON.parse(localStorage.getItem('chaosProfiles')||'[]');}catch(e){}
+  var grid=document.getElementById('galleryGrid');
+  if(!list.length){grid.innerHTML='<div class="empty-state"><div class="ei">🫙</div><p>No profiles yet — be the first chaos creator!</p></div>';return;}
+  grid.innerHTML=list.map(function(pr,i){
+    var pal=PALETTES[pr.palIdx]||PALETTES[0];var key=(pr.vibe||'chaotic').toLowerCase();
+    var av=pr.image?'<div class="g-avatar"><img src="'+pr.image+'" alt=""></div>':'<div class="g-avatar" style="background:'+pal.avatarBg+';font-size:1.3rem;">'+(VEMOJI[key]||'✨')+'</div>';
+    var qt=((pr.motto||pr.title)||'');
+    return '<div class="g-item" onclick="openModal('+i+')"><div class="g-stripe" style="background:'+pal.bar+'"></div>'+av+'<div class="g-name">'+pr.name+'</div><div class="g-title">'+(pr.title||'')+'</div><div class="g-tags"><span class="g-tag" style="background:'+pal.badge+';color:'+pal.badgeTxt+';">'+(VEMOJI[key]||'✨')+' '+pr.vibe+'</span>'+(pr.style?'<span class="g-tag" style="background:rgba(181,196,168,.3);color:#4A6040;">'+(SEMOJI[pr.style]||'🎨')+' '+pr.style+'</span>':'')+'</div><div class="g-quote">&ldquo;'+qt.substring(0,55)+(qt.length>55?'&hellip;':'')+'&rdquo;</div></div>';
+  }).join('');
+}
+function openModal(idx){
+  var list=[];try{list=JSON.parse(localStorage.getItem('chaosProfiles')||'[]');}catch(e){}
+  var pr=list[idx];if(!pr)return;
+  var pal=PALETTES[pr.palIdx]||PALETTES[0];var key=(pr.vibe||'chaotic').toLowerCase();
+  var av=pr.image?'<img src="'+pr.image+'" style="width:60px;height:60px;border-radius:50%;object-fit:cover;border:3px solid var(--blush);">':'<div style="width:60px;height:60px;border-radius:50%;background:'+pal.avatarBg+';display:flex;align-items:center;justify-content:center;font-size:1.8rem;border:3px solid var(--blush);">'+(VEMOJI[key]||'✨')+'</div>';
+  document.getElementById('modalBody').innerHTML='<div style="height:5px;background:'+pal.bar+';border-radius:8px;margin-bottom:22px;"></div><div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">'+av+'<div><div style="font-family:\'Playfair Display\',serif;font-size:1.5rem;font-weight:900;color:var(--dark);">'+pr.name+'</div><div style="font-family:\'Caveat\',cursive;color:var(--terra);font-size:1rem;">'+(pr.title||'')+'</div><span style="display:inline-block;margin-top:6px;padding:3px 12px;border-radius:100px;font-size:.7rem;font-weight:700;text-transform:uppercase;background:'+pal.badge+';color:'+pal.badgeTxt+';">'+(VEMOJI[key]||'✨')+' '+pr.vibe+(pr.style?' &middot; '+pr.style:'')+'</span></div></div><div style="display:grid;gap:11px;">'+(pr.t1?'<div style="background:rgba(245,197,176,.32);border-radius:12px;padding:14px;"><div style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--mocha);margin-bottom:5px;">💫 Traits</div><div style="font-size:.88rem;line-height:1.6;">'+pr.t1+(pr.t2&&pr.t2!==pr.t1?' &middot; '+pr.t2:'')+'</div></div>':'')+(pr.power?'<div style="background:rgba(212,197,226,.32);border-radius:12px;padding:14px;"><div style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--mocha);margin-bottom:5px;">⚡ Superpower</div><div style="font-size:.88rem;">'+pr.power+'</div></div>':'')+(pr.toxic?'<div style="background:rgba(181,196,168,.32);border-radius:12px;padding:14px;"><div style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--mocha);margin-bottom:5px;">🕳️ Toxic Trait</div><div style="font-size:.88rem;">'+pr.toxic+'</div></div>':'')+(pr.motto?'<div style="background:linear-gradient(135deg,var(--terra),#D04538);border-radius:12px;padding:18px;"><div style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.68);margin-bottom:6px;">📿 Life Motto</div><div style="font-family:\'Playfair Display\',serif;font-style:italic;font-size:1.1rem;color:white;">&ldquo;'+pr.motto+'&rdquo;</div></div>':'')+'</div><div style="margin-top:14px;font-size:.72rem;color:var(--mocha);opacity:.45;text-align:right;">Created '+(pr.date||'')+'</div>';
+  document.getElementById('modalBg').classList.add('on');
+}
+document.getElementById('modalBg').addEventListener('click',function(e){if(e.target===this)this.classList.remove('on');});
+document.getElementById('modalClose').addEventListener('click',function(){document.getElementById('modalBg').classList.remove('on');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('modalBg').classList.remove('on');});
+document.getElementById('printBtn').addEventListener('click',function(){if(!currentProfile){showToast('Generate a profile first! ✨');return;}window.print();});
+document.getElementById('copyBtn').addEventListener('click',function(){
+  if(!currentProfile){showToast('Generate a profile first! ✨');return;}
+  var pr=currentProfile;
+  var txt='✨ CHAOS PROFILE — '+pr.name+'\nTitle: '+pr.title+'\nVibe: '+pr.vibe+(pr.style?' | '+pr.style:'')+'\n\n💫 '+pr.t1+'\n⚡ '+(pr.power||'Undiscovered')+'\n🕳️ '+pr.weakness+'\n'+(pr.toxic?'😏 '+pr.toxic+'\n':'')+'🎲 '+pr.funFact+'\n\n"'+(pr.motto||pr.title)+'"\n\nbabicadesigns.com ✨';
+  try{navigator.clipboard.writeText(txt).then(function(){showToast('📋 Copied!');}).catch(function(){fallbackCopy(txt);});}catch(e){fallbackCopy(txt);}
+});
+function fallbackCopy(txt){var ta=document.createElement('textarea');ta.value=txt;ta.style.cssText='position:fixed;top:-9999px;left:-9999px;opacity:0;';document.body.appendChild(ta);ta.focus();ta.select();try{document.execCommand('copy');showToast('📋 Copied!');}catch(e){showToast('✍️ Long-press to copy!');}document.body.removeChild(ta);}
+document.getElementById('newBtn').addEventListener('click',function(){document.getElementById('form-section').scrollIntoView({behavior:'smooth'});});
+document.getElementById('emailBtn').addEventListener('click',function(){var v=document.getElementById('emailInp').value;if(!v||v.indexOf('@')<0){showToast('👀 That doesn\'t look like an email…');return;}showToast('💌 Saved! Talk soon ✨');document.getElementById('emailInp').value='';});
+loadGallery();
+</script>
+</body>
+</html>
